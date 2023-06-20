@@ -29,6 +29,15 @@ body {
      transform: translateX(-50%);
    }
  
+footer {
+  position: fixed;
+  text-align: center;
+  color: white;
+  width: 100%;
+  bottom: 5px;
+  font-family: Verdana;
+  font-size: 14px;
+}
    .controlpanel .controls {
      background: black;
      transform: translateY(-100%);
@@ -134,6 +143,7 @@ body {
     color: black;
     border: 3px solid black;
   }
+
   
   #searchbar {
     background-color: rgba(30, 30, 30, 0.8);

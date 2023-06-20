@@ -164,6 +164,16 @@ select {
   color: #fff;
 }
 
+footer {
+  position: fixed;
+  text-align: center;
+  color: white;
+  width: 100%;
+  bottom: 5px;
+  font-family: Verdana;
+  font-size: 14px;
+}
+
 .themes2 {
   cursor: pointer;
   border: 2px;

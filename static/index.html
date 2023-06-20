@@ -10,7 +10,8 @@
   <!-- Load the site scripts-->
   <script src="resources/js/main.js"></script>    
   <script src="assets/js/panic.js"></script>
-    <script src="assets/js/particles.js"></script>
+  <script src="assets/js/particles.js"></script>
+  <script src="assets/js/splashtexts.js"></script>
     <link rel="stylesheet" href="assets/css/particles.css" />
     <link rel="shortcut icon" href="resources/images/favicon/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="resources/css/home.css"/>
@@ -56,12 +57,17 @@
             <div class="title">
               <h1>The Unblocked Hub</h1>
             </div>
-            <button class="discord-btn2">Join our Discord</button>
-          
+      <br>
+      <p id="splashtext"></p>
+            <button class="discord-btn2">Join our Discord</button> 
+	    <button class="github-btn">Go To Our Github</button>
       </div>
       <script>
         document.querySelector(".discord-btn2").addEventListener("click", () => {
           window.open("https://dsc.gg/theunblockedhub", "_blank");
+        });
+        document.querySelector(".github-btn").addEventListener("click", () => {
+          window.open("https://github.com/TheUnblockedHubOfficial/TheUnblockedHub", "_blank");
         });
       </script>
       <script>
@@ -73,6 +79,10 @@
           localStorage.setItem('cloak', 'true');
         }
       </script>
+      <br>
+ <p>In order to bring new content and properly maintain our site, The Unblocked Hub will shut down for summer maintence starting on June 31, and ending on September 1. Thank you for being a supporter, and we look fowarding to breaking the chains schools locked us in next year.
+      <br>-The Unblocked Hub
+
       <div>
         <script src="assets/js/particles.js"></script>
         <script src="/assets/js/themecontrol.js"></script>
@@ -87,6 +97,15 @@
   gtag('js', new Date());
 
   gtag('config', 'G-BX1R0Q6FP4');
+    document.querySelector("#splashtext").innerHTML = splashtexts[Math.floor(Math.random() * splashtexts.length)];
+
+    var homebtns = document.querySelectorAll(".homebutton");
+    homebtns.forEach(btn => {
+      btn.classList.add(`hvr-${effects[Math.floor(Math.random() * effects.length)]}`)
+    })
 </script>
+</div>
+  <footer>Copyright &copy; 2023 The Unblocked Hub</footer>
+
     </body>
 </html>
