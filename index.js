@@ -31,20 +31,12 @@ app.get("/nature", (req, res) => {
   res.sendFile(path.join(__dirname, "static", "play.html"));
 });
 
-app.get("/forest", (req, res) => {
-  res.sendFile(path.join(__dirname, "static", "forest.html"));
-});
-
 app.get("/go", (req, res) => {
   res.sendFile(path.join(__dirname, "static", "go.html"));
 });
 
 app.get("/settings", (req, res) => {
   res.sendFile(path.join(__dirname, "static", "settings.html"));
-});
-
-app.get("/donate", (req, res) => {
-  res.sendFile(path.join(__dirname, "static", "donate.html"));
 });
 
 app.get("/ocean", (req, res) => {

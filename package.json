@@ -1,7 +1,7 @@
 {
-  "name": "",
-  "version": "4.1.4",
-  "description": "https://dsc.gg/theunblockedhub",
+  "name": "The Unblockd Hub",
+  "version": "1.2.1",
+  "description": "site-theunblockedhubofficial.koyab.app",
   "type": "module",
   "engines": {
     "npm": ">=7.0.0",
