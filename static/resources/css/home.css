@@ -153,32 +153,6 @@
 
 }
 
-.discord-btn2{
-    margin-top: 10px;
-    width: 200px;
-    height: 40px;
-    background-color: rgba(59, 56, 56, 0.356);
-    border: none;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1em;
-    color: white;
-    transition: all 0.5s ease-in-out;
-    cursor: pointer;
-    transition: all 0.5s ease-in-out;
-}
-
-.discord-btn2:hover{
-    background-color: rgba(0, 0, 0, 0.356);
-    color: rgba(255, 255, 255, 0.534);
-    scale: 1.1;
-
-}
-
 .github-btn{
     margin-top: 10px;
     width: 200px;

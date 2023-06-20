@@ -59,6 +59,7 @@
       <br>
       <p id="splashtext"></p>
 	    <button class="github-btn">Go To Our Github</button>
+	
       </div>
       <script>
         document.querySelector(".discord-btn2").addEventListener("click", () => {
@@ -101,6 +102,9 @@
     homebtns.forEach(btn => {
       btn.classList.add(`hvr-${effects[Math.floor(Math.random() * effects.length)]}`)
     })
+      document.querySelector(".github-btn").addEventListener("click", () => {
+        window.open("https://github.com/TheUnblockedHubOfficial/TheUnblockedHub", "_blank");
+      });
 </script>
 </div>
   <footer>Copyright &copy; 2023 The Unblocked Hub</footer>
