@@ -4,8 +4,8 @@
   "description": "site-theunblockedhubofficial.koyab.app",
   "type": "module",
   "engines": {
-    "npm": ">=7.0.0",
-    "node": ">=16.0.0"
+    "npm": ">=2.0.0",
+    "node": ">=5.0.0"
   },
   "scripts": {
     "start": "node index.js"
