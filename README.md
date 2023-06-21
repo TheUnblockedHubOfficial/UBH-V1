@@ -2,10 +2,7 @@
 
 # About Us
 
-The Unblocked Hub is one of the best modern unblocked game sites. Check it out <a href="https://site-theunblockedhubofficial.koyeb.app">here</a>. If this link is blocked, you can get more links in our <a href="https://dsc.gg/theunblockedhub">Discord Server!</a>
-
-<a href="https://dsc.gg/theunblockedhub"><img height="30px" src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white"><img></a>
-</p>  
+The Unblocked Hub is one of the best modern unblocked game sites. Check it out <a href="https://site-theunblockedhubofficial.koyeb.app">here</a>.  
 
 # Deploying
 
