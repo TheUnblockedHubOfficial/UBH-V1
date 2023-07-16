@@ -1,96 +1,135 @@
-<!DOCTYPE html>
-<html>
 <head>
-  <title>Settings | The Unblocked Hub</title>
-  <link rel="icon" href="icon.png">
-  <meta content="The Unblocked Hub" property="og:title" />
-  <meta content='The Unblocked Hub is the #1 site for all-in-one school entertainment. Accelerate your "learning" with our collection of games, apps, emulators, proxies, and so much more.' property="og:description" />
-  <meta content="icon.png" property="og:image" />
-  <meta content="#2b2d31" data-react-helmet="true" name="theme-color" />
-  <link rel="stylesheet" href="styles/style.css">
-  <link rel="stylesheet" href="styles/navbar.css" />
-  <link href="https://unpkg.com/movement.css/movement.css" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/e897e5d5dc.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/gh/proudparrot2/quick.js/quick.js"></script>
-  <script defer data-api="/data/event" data-domain="artclass.site" src="/data/script.js"></script>
-  <script src="js/main.js"></script>
-<style>
-  body, html {
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-
-  }
-
-  /* Hover effects for buttons */
-  button {
-    background-color: #2b2d31;
-    border: none;
-    color: white;
-    padding: 12px 24px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 12px;
-    transition: all 0.5s
-  }
-
-  button:hover {
-    background-color: #4f545c;
-    color: white;
-  }
-
-  input[type=text] {
-    border-radius: 12px;
-    padding: 12px;
-    font-size: 16px;
-    border: none;
-    margin: 4px 2px;
-    transition-duration: 0.5s;
-  }
-
-  input[type=text]:focus {
-    border: 2px solid #2b2d31;
-    outline: none;
-  }
-</style>
+  <html lang="en">
+  <link rel="icon" type="image/x-icon" href="assets/images/branding/favicon/favicon.png">
+  <title>Classes</title>
+  <meta name="description" content="From studio portraits to epic alpine landscapes, browse the best photography, retouching and photojournalism today."/>
+  <link rel="stylesheet" href="/assets/css/particles.css" />
+  <link rel="stylesheet" href="/assets/css/nav.css" />
+  <link rel="stylesheet" href="/assets/css/settings/main2.css"/>  
+   <script async src="/assets/js/panic.js"></script>
+  <script src="assets/js/themecontrol.js"></script>
+</head>
 
 <body>
-  <div id="particles-js"></div>
-  <script src="js/particles.min.js"></script>
-  <script src="js/particles.js"></script>
+      <!-- Nav Bar Start-->
+      <div class="header2">
+        <br>
+        <a href="/../" class="logo">The Unblocked Hub</a>
+        <div class="header2-right">
+          <a href="photography">Proxy</a>
+          <a href="nature">Games</a>
+          <a href="ocean">Apps</a>
+          <a href="settings">Settings</a>
+        </div>
+      </div>
+      <!-- Nav Bar End-->
 
-  
-  <div id="navbar"></div>
-  <script src="js/navbar.js"></script>
+  <body class="classic midnight">
+    <div id="particles-js">
+      <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    </div>
+    <div class="row">
+      <div class="card">
+        <div class="container">
+          <div class="title">
+            <h4><b>About:Blank Cloaker</b></h4>
+          </div>
+          <p>Clicking this button will open your tab in an about:blank tab, It will stop extensions from seeing your screen.</p>
+          <div>
+            <button id="tabcloak" class="center-global tab-cloak tabcloak">About:Blank Button</button>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="container">
+          <div class="title">
+            <h4><b>Themes</b></h4>
+          </div>
+          <p>Change the theme of the website.</p>
+        </div>
+        <div>
+          <select id="Themes" class="themes2">
+            <option class="option" value="Classic">Default</option>
+            <option class="option" value="Midnight">Midnight</option>
+            <option class="option" value="Ocean">Ocean</option>
+            <option class="option" value="Light">Light</option>
+          </select>
+        </div>
+      </div>
+      <div class="card">
+        <div class="container">
+          <div class="title">
+            <h4><b>Tab Cloaker</b></h4>
+          </div>
+          <form>
+            <input class="tab-cloaker-form" type="text" id="icon" placeholder="Change Tab Icon" name="icon">
+            <input class="tab-cloaker-form" type="text" id="name" name="name" placeholder="Change Tab Name">
+            <input class="tab-cloaker-form" type="button" value="Save" onclick="saveIcon(); saveName(); redirectToMainDomain() ">
+          </form>
+        </div>
+      </div>
+      <div class="card">
+        <div class="container">
+          <div class="title">
+            <h4><b>PANIC Button</b></h4>
+          </div>
+<input class="tab-cloaker-form" placeholder="Panic Key" type="text" id="eventKeyInput" value="">
+<input class="tab-cloaker-form" placeholder="Panic Link" type="text" id="linkInput" value="">
+<input class="tab-cloaker-form" type="button" value="Save" onclick="saveEventKey(); redirectToMainDomain();">
+        </div>
+      </div>
+      <div class="card">
+        <div class="container">
+          <div class="title">
+            <h4><b>Coming Soon</b></h4>
+          </div>
+          <p>Coming Soon! Any Suggestions?</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="container">
+          <div class="title">
+            <h4><b>Coming Soon!</b></h4>
+          </div>
+          <p>Coming Soon! Any Suggestions?</p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </body>
+  <script src="/assets/js/particles.js"></script>
+  <script src="/assets/js/settings/settings.js"></script>
+  <script src="/assets/js/settings/themes.js"></script>
+  <script src="/assets/js/settings/name.js"></script>
+  <script src="/assets/js/settings/changes.js"></script>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7T3R5WJJRV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  <h1>Settings</h1>
-  <!--
-  <h3>Clickoff Cloaking</h3>
-  <p>When you click off this tab, the tab's name will change to these settings.</p>
-  <p>This unfortunately does not work in about:blank.</p>
-  <input id="tabname" type="text" value="" placeholder="Tab Name">
-  <button onclick="updateTabNames()"><i class="fa-solid fa-check"></i></button><br>
-  
-  <input id="faviconInput" type="text" placeholder="Tab Icon URL">
-  <button onclick="updateFavicon()"><i class="fa-solid fa-check"></i></button><br><br>
-  <button onclick="resetCloak()">Reset Cloaking</button> <br><br>-->
-  <h3>Cloaking</h3> <br>
-  <p>Must be a valid JavaScript event.key - look <a target="_blank" href="https://www.toptal.com/developers/keycode">here</a> to get one.<br>If you don't enter a valid one, the cloaking will break.</p>
-  <button id="detectkey" onclick="keydetect()">Detect key</button><input id="cloakkey" type="text" placeholder="Cloak Key" requried> <button onclick="processkey()"><i class="fa-solid fa-check"></i></button><br>
-  <p id="isenabled">Cloaking: Enabled</p>
-  <button onclick="cloak('disabled')" id="disablecloak">Disable Cloaking</button>
-  <button onclick="cloak('enabled')" id="enablecloak">Enable Cloaking</button> <br><br>  
-  <button onclick="clearcustomgames()"> Clear custom games</button>
-  <button onclick="clearcustomapps()"> Clear custom apps</button>
-
-  
-  <script src="js/settings.js"></script>
-
+  gtag('config', 'G-7T3R5WJJRV');
+</script>
+  <script>
+    if (localStorage.getItem('cloak')) {
+      const cloakValue = localStorage.getItem('cloak') === 'true' ? 'true' : 'false';
+      document.getElementById('tab-cloak').value = cloakValue;
+    }
+    document.getElementById('tab-cloak').addEventListener('change', function() {
+      localStorage.setItem('cloak', this.value === 'true' ? 'true' : 'false');
+    });
+  </script>
+  <script>
+    if (localStorage.getItem('Transitions')) {
+      const cloakValue = localStorage.getItem('Transitions') === 'true' ? 'true' : 'false';
+      document.getElementById('tab-cloak').value = cloakValue;
+    }
+    document.getElementById('Transitions').addEventListener('change', function() {
+      localStorage.setItem('Transitions', this.value === 'true' ? 'true' : 'false');
+    });
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2450237895619054"
+     crossorigin="anonymous"></script>
   <footer>Copyright &copy; 2023 The Unblocked Hub</footer>
-  
-</body>
+</html>

@@ -1,89 +1,112 @@
 <!DOCTYPE html>
-
-<head>
-
-  <title>The Unblocked Hub</title>
-  <link rel="icon" href="icon.png">
-
-  <meta content="The Unblocked Hub" property="og:title" />
-  <meta content='The Unblocked Hub is the #1 site for all-in-one school entertainment. Accelerate your "learning" with our collection of games, apps, emulators, proxies, and so much more.' property="og:description" />
-  <meta content="icon.png" property="og:image" />
-  <meta content="#2b2d31" data-react-helmet="true" name="theme-color" />
-
-  <link rel="stylesheet" href="styles/style.css">
-  <link rel="stylesheet" href="styles/navbar.css" />
-  <link rel="stylesheet" href="https://unpkg.com/movement.css/movement.css">
-  <link rel="stylesheet" href="styles/hover.css" />
-
-  <script src="https://kit.fontawesome.com/e897e5d5dc.js" crossorigin="anonymous"></script>
-  
-  <style>
-    body,
-    html {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-    }
-  </style>
-</head>
-
-<body>
-  <script src="js/main.js"></script>
-  <div id="particles-js"></div>
-  <script src="js/particles.min.js"></script>
-  <script src="js/particles.js"></script>
-  <script src="js/uv.js"></script>
-  <script src="data/splashtexts.js"></script>
-  <script src="data/hovereffects.js"></script>
-
-  <div id="navbar"></div>
-  <script src="js/navbar.js"></script>
-
-  <div class="btngroup">
-    <div>
-      <h1>The Unblocked Hub</h1>
+<html lang="en">
+  <head>
+    <title>Classes</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <meta name="description" content="From studio portraits to epic alpine landscapes, browse the best photography, retouching and photojournalism today."/>
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+  <!-- Load the site scripts-->
+  <script src="resources/js/main.js"></script>    
+  <script src="assets/js/panic.js"></script>
+  <script src="assets/js/particles.js"></script>
+  <script src="assets/js/splashtexts.js"></script>
+    <link rel="stylesheet" href="assets/css/particles.css" />
+    <link rel="shortcut icon" href="resources/images/favicon/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="resources/css/home.css"/>
+    <link rel="stylesheet" href="assets/css/nav.css">
+  </head>
+  <body>
+     <!-- Nav Bar Start-->
+     <div class="header2">
+      <br>
+      <a href="/../" class="logo">The Unblocked Hub</a>
+      <div class="header2-right">
+        <a href="photography">Proxy</a>
+        <a href="nature">Games</a>
+        <a href="ocean">Apps</a>
+        <a href="settings">Settings</a>
+      </div>
+    </div>
+    <!-- Nav Bar End-->
+    <div id="cookieNotice" class="light display-right" style="display: block;">
+      <div id="closeIcon" style="display: none;"></div>
+      <div class="title-wrap">
+        <h4>Cookie Consent</h4>
+      </div>
+      <div class="content-wrap">
+        <div class="msg-wrap">
+          <p>We use cookies! This website uses cookies or similar technologies, to enhance your browsing experience and provide personalized recommendations. By continuing to use our website, you agree to our <a style="color: grey;" href="cookieconsentpolicy.html">Cookie Policy</a>
+          </p>
+          <div class="btn-wrap">
+            <button class="popupbutton" onclick="acceptCookieConsent();">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- JavaScript source file -->
+    <script src="resources/js/cookie_consent.js"></script>
+    <body class="classic midnight">
+      <canvas class="particles-js-canvas-el" style="z-index:10; top:0; left:0; position:absolute; width: 100%; height: 100%;" width="1920" height="942"></canvas>
+      <div id="particles-js">
+        <script rel="preload" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <div class="container">
+          <div class="mainhead">
+            <div class="title">
+              <h1>The Unblocked Hub</h1>
+            </div>
       <br>
       <p id="splashtext"></p>
-      <br><br>
-      <button class="homebutton" onclick="window.location.href = 'https://github.com/TheUnblockedHubOfficial/TheUnblockedHub'">View Our Github</button>
-      <button class="homebutton" id="blankbtn" onclick="blank()">Open in about:blank</button>
-      <button class="homebutton" onclick="window.location.href = 'https://www.theunblockedhub.com'">Back To Our Main Site</button>
+	    <button class="github-btn">Go To Our Github</button>
+	    <button class="beta-btn">Test Out Beta Site</button>
+      </div>
+      <script>
+        document.querySelector(".github-btn").addEventListener("click", () => {
+          window.open("https://github.com/TheUnblockedHubOfficial/TheUnblockedHub", "_blank");
+        });
+        document.querySelector(".beta-btn").addEventListener("click", () => {
+          window.open("https://www.theunblockedhub.com/beta", "_blank");
+        });
+      </script>
+      <script>
+        if (localStorage.getItem('cloak')) {
+          const cloakValue = localStorage.getItem('cloak') === 'true' ? 'true' : 'false';
+          document.getElementById('tab-cloak').value = cloakValue;
+        } else {
+          document.getElementById('tab-cloak').value = 'true';
+          localStorage.setItem('cloak', 'true');
+        }
+      </script>
       <br>
-      <iframe id="alienhub_ad" width="455" height="155" style="border: none; overflow: none"></iframe>
-    </div>
+      <div>
+        <script src="assets/js/particles.js"></script>
+        <script src="/assets/js/themecontrol.js"></script>
+      </div>
+      <canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="1920" height="942"></canvas>
+      </div>
+       <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BX1R0Q6FP4"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2450237895619054"
+     crossorigin="anonymous"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  </div>
-  <footer>Copyright &copy; 2023 The Unblocked Hub</footer>
-
-  <script src="./uv/uv.bundle.js"></script>
-  <script src="./uv/uv.config.js"></script>
-  <script src="js/cloak.js"></script>
-  
-  
-  <script>
-    registerSW()
-    if (window.parent.window.location.href == "about:blank") document.getElementById("blankbtn").remove()
-
-    function blank() {
-      const tab = window.open('about:blank', '_blank');
-      const iframe = tab.document.createElement('iframe');
-      const stl = iframe.style;
-      stl.border = stl.outline = 'none';
-      stl.width = '100vw';
-      stl.height = '100vh';
-      stl.position = 'fixed';
-      stl.left = stl.right = stl.top = stl.bottom = '0';
-      iframe.src = self.location;
-      tab.document.body.appendChild(iframe);
-      //window.parent.window.location.replace('https://classroom.google.com')
-    }
-
+  gtag('config', 'G-BX1R0Q6FP4');
     document.querySelector("#splashtext").innerHTML = splashtexts[Math.floor(Math.random() * splashtexts.length)];
 
     var homebtns = document.querySelectorAll(".homebutton");
     homebtns.forEach(btn => {
       btn.classList.add(`hvr-${effects[Math.floor(Math.random() * effects.length)]}`)
     })
-  </script>
-</body>
+      document.querySelector(".github-btn").addEventListener("click", () => {
+        window.open("https://github.com/TheUnblockedHubOfficial/TheUnblockedHub", "_blank");
+      });
+</script>
+</div>
+  <footer>Copyright &copy; 2023 The Unblocked Hub</footer>
+
+    </body>
+</html>

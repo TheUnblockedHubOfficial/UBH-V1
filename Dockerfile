@@ -1,17 +1,14 @@
-FROM node:18-alpine
+# syntax=docker/dockerfile:1
+
+FROM node:19-bullseye
 ENV NODE_ENV=production
 
 WORKDIR /app
 
-RUN npm install pm2 -g
-
-COPY package*.json .
+COPY ["package.json", "package-lock.json*", "./"]
 
 RUN npm install
 
-COPY static static/
-COPY index.js .
+COPY . .
 
-EXPOSE 3000
-
-CMD ["pm2-runtime", "index.js"]
+CMD [ "node", "index.js" ]
