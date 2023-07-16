@@ -19,7 +19,7 @@ var navbar = `
 
 <nav>
   <div class="container">
-    <img src="/icon.png" alt="Logo" />
+    <img src="/beta/icon.png" alt="Logo" />
     <ul>
       <li data-m="bounce-down" class="hvr-underline-from-center"><a href="/beta/"><ion-icon class="hvr-icon" name="home"></ion-icon> Home</a></li>
       <li data-m="bounce-down" class="hvr-underline-from-center"><a href="/beta/gs.html"><ion-icon class="hvr-icon" name="game-controller"></ion-icon> Games</a></li>
