@@ -1,113 +1,57 @@
-import express from "express";
-import http from "node:http";
-import createBareServer from "@tomphttp/bare-server-node";
-import path from "node:path";
-import * as dotenv from "dotenv";
-dotenv.config();
+import { fileURLToPath } from 'node:url';
+import { join } from 'node:path';
+import { hostname } from 'node:os';
+import { createServer } from 'node:http';
+import createBareServer from '@tomphttp/bare-server-node';
+import express from 'express';
+// "@titaniumnetwork-dev/ultraviolet": "^1.0.5",
+//import { uvPath } from '@titaniumnetwork-dev/ultraviolet';
+import { getLastCommit } from 'git-last-commit';
+import axios from 'axios';
 
-const __dirname = process.cwd();
-const server = http.createServer();
-const app = express(server);
-const bareServer = createBareServer("/bare/");
-
-app.use(express.json());
-app.use(
-  express.urlencoded({
-    extended: true,
-  })
-);
-
-app.use(express.static(path.join(__dirname, "static")));
-
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "static", "index.html"));
+getLastCommit((err, commit) => {
+  if (!err) console.log(`Latest update: ${commit.subject} (${commit.committer.name})`);
 });
 
-app.get("/photography", (req, res) => {
-  res.sendFile(path.join(__dirname, "static", "photography.html"));
-});
+const publicPath = fileURLToPath(new URL('./static/', import.meta.url));
+const bare = createBareServer('/bare/');
+const server = createServer();
+const app = express();
+/*
+Trust proxy by default, if you are self hosting and not behind a reverse proxy,
+you should disable this.
+*/
+app.set('trust proxy', true);
+let dataScript;
+const port = process.env.PORT || 3000;
 
-app.get("/nature", (req, res) => {
-  res.sendFile(path.join(__dirname, "static", "play.html"));
-});
+app.use(express.static(publicPath));
+//app.use('/uv/', express.static(uvPath));
 
-app.get("/go", (req, res) => {
-  res.sendFile(path.join(__dirname, "static", "go.html"));
-});
-
-app.get("/settings", (req, res) => {
-  res.sendFile(path.join(__dirname, "static", "settings.html"));
-});
-
-app.get("/ocean", (req, res) => {
-  res.sendFile(path.join(__dirname, "static", "ocean.html"));
-});
-
-app.get("/404", (req, res) => {
-  res.sendFile(path.join(__dirname, "static", "404.html"));
-});
-
-app.get("/*", (req, res) => {
-  res.redirect("/404");
-});
-
-app.get("/beta/", (req, res) => {
-  res.sendFile(path.join(__dirname, "static", "beta", "index.html"));
-});
-
-app.get("/beta/404", (req, res) => {
-  res.sendFile(path.join(__dirname, "static", "beta", "404.html"));
-});
-
-app.get("/beta/apps", (req, res) => {
-  res.sendFile(path.join(__dirname, "static", "beta", "apps.html"));
-});
-
-app.get("/beta/gs", (req, res) => {
-  res.sendFile(path.join(__dirname, "static", "beta", "gs.html"));
-});
-
-app.get("/beta/lgo", (req, res) => {
-  res.sendFile(path.join(__dirname, "static", "beta", "load.html"));
-});
-
-app.get("/beta/loading", (req, res) => {
-  res.sendFile(path.join(__dirname, "static", "beta", "fullscreen.html"));
-});
-
-app.get("/beta/search", (req, res) => {
-  res.sendFile(path.join(__dirname, "static", "beta", "search.html"));
-});
-
-app.get("/beta/settings", (req, res) => {
-  res.sendFile(path.join(__dirname, "static", "beta", "settings.html"));
-});
-
-app.get("/beta/utilities", (req, res) => {
-  res.sendFile(path.join(__dirname, "static", "beta", "utils.html"));
-});
-
-// Bare Server
-server.on("request", (req, res) => {
-  if (bareServer.shouldRoute(req)) {
-    bareServer.routeRequest(req, res);
+app.use((req, res) => res.status(404).sendFile(join(publicPath, '404.html')));
+server.on('request', (req, res) => {
+  if (bare.shouldRoute(req)) {
+    bare.routeRequest(req, res);
   } else {
     app(req, res);
   }
 });
 
-server.on("upgrade", (req, socket, head) => {
-  if (bareServer.shouldRoute(req)) {
-    bareServer.routeUpgrade(req, socket, head);
+server.on('upgrade', (req, socket, head) => {
+  if (bare.shouldRoute(req)) {
+    bare.routeUpgrade(req, socket, head);
   } else {
     socket.end();
   }
 });
 
-server.on("listening", () => {
-  console.log(`The Unblocked Hub running at http://localhost:${process.env.PORT}`);
-});
-
-server.listen({
-  port: process.env.PORT,
+server.listen({ port }, () => {
+  console.log('Listening on:');
+  console.log(`\thttp://localhost:${server.address().port}`);
+  console.log(`\thttp://${hostname()}:${server.address().port}`);
+  console.log(
+    `\thttp://${
+      server.address().family === 'IPv6' ? `[${server.address().address}]` : server.address().address
+    }:${server.address().port}`
+  );
 });

@@ -1,7 +1,7 @@
 {
-    "name": "math",
-    "description": "Mathematics.",
-    "repository": "https://github.com/TheUnblockedHubOfficial/The-Unblocked-Hub",
-    "logo": "https://github.com/TheUnblockedHubOfficial/The-Unblocked-Hub/blob/main/static/assets/images/branding/favicon/in.png",
-    "keywords": ["school", "Unblocked", "ultraviolet"]
-  }
+  "name": "The Unblocked Hub",
+  "description": "The Unblocked Hub is the #1 site for all-in-one school entertainment. Accelerate your "learning" with our collection of games, apps, emulators, proxies, and so much more.",
+  "repository": "https://github.com/TheUnblockedHubOfficial/TheUnblockedHub",
+  "logo": "https://github.com/TheUnblockedHubOfficial/TheUnblockedHub/static/icon.png",
+  "keywords": ["artclass" "games" "school" "proxy" "apps" "proxy-server" "unblocked-websites" "unblocker" "unblock" "unblocked" "unblocked-games" "unblockedgames" "unblockers" "unblocked-website" "unblocked-school" "unblockedapps" "theunblockedhub"]
+}

@@ -1,6 +1,5 @@
-
   services:
   - type: web
-    name: The Unblocked Hub
+    name: theunblockedhub
     env: docker
     plan: free
