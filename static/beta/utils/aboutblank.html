@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Art Class</title>
+  <link rel="icon" href="../icon.png">
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../styles/navbar.css" />
+  <script src="https://kit.fontawesome.com/e897e5d5dc.js" crossorigin="anonymous"></script>
+</head>
+
+<style>
+
+</style>
+
+<body>
+  <div id="particles-js"></div>
+  <script src="../js/particles.min.js"></script>
+  <script src="../js/particles.js"></script>
+  <script src="js/main.js"></script>
+  
+  <div id="navbar"></div>
+  <script src="../js/navbar.js"></script>
+  
+  <h1>about:blank launcher</h1>
+  <p>Insert a url into the text box, then click the Launch button to blast off!</p>
+  <input id="urlInput" type="text" placeholder="https://bing.com" autocomplete="off"/>
+  <button id="launch"><i class="fa-solid fa-rocket"></i> Launch</button>
+
+  <script>
+    document.getElementById("launch").addEventListener("click", function() {
+    const url = document.getElementById("urlInput").value;
+  
+    if (url.startsWith("https://")) {
+      blank(url)
+    } else {
+      alert("Unable to confirm URL. Please make sure it starts with https://")
+    }
+  
+  });
+  
+  function blank(url) {
+    const tab = window.open('about:blank', '_blank');
+    const iframe = tab.document.createElement('iframe');
+    const stl = iframe.style;
+    stl.border = stl.outline = 'none';
+    stl.width = '100vw';
+    stl.height = '100vh';
+    stl.position = 'fixed';
+    stl.left = stl.right = stl.top = stl.bottom = '0';
+    iframe.src = url;
+    tab.document.body.appendChild(iframe);
+  }
+  </script>
+  
+  <footer>Copyright &copy; 2023 Art Class</footer>
+
+  <script src="../js/cloak.js"></script>
+  
+  
+</body>

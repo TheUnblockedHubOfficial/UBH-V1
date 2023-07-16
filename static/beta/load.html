@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<head>
+
+  <title>The Unblocked Hub</title>
+  <link rel="icon" href="icon.png">
+  
+  <meta content="The Unblocked Hub" property="og:title" />
+  <meta content='The Unblocked Hub is the #1 site for all-in-one school entertainment. Accelerate your "learning" with our collection of games, apps, emulators, proxies, and so much more.' property="og:description" />
+  <meta content="icon.png" property="og:image" />
+  <meta content="#2b2d31" data-react-helmet="true" name="theme-color" />
+  
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="styles/navbar.css" />
+  <script src="https://kit.fontawesome.com/e897e5d5dc.js" crossorigin="anonymous"></script>
+  <script defer data-api="/data/event" data-domain="artclass.site" src="/data/script.js"></script>
+  
+</head>
+<style>
+  
+</style>
+<body>
+  <script src="js/main.js"></script>
+  <div id="particles-js"></div>
+  <script src="js/particles.min.js"></script>
+  <script src="js/particles.js"></script>
+  
+  <div id="navbar"></div>
+  <script src="js/navbar.js"></script>
+  <div id="container">
+    <iframe frameborder="0" id="frame"></iframe>
+    <div id="gameInfo">
+        <div class="yes">
+            <img id="gameImage" alt="game icon">
+            <h3 id="gameTitle"></h3>
+        </div>
+        <p id="gameDescription"></p>
+        
+        <div id="menubtns">
+            <button onclick="window.location.href = '/'"><i class="fa-solid fa-house"></i></button>
+            <button onclick="fullscreen()"><i class="fa-solid fa-expand"></i></button>
+        </div>
+    </div>
+    
+
+  </div>
+
+  <script src="./uv/uv.bundle.js"></script>
+  <script src="./uv/uv.config.js"></script>
+  <script src="./data/games.js"></script>
+  <script src="./data/apps.js"></script>
+  <script src="./data/utils.js"></script>
+  <script src="js/cloak.js"></script>
+  <script src="js/uv.js"></script>
+  
+
+  <script>
+    if (window.parent.window.location == "about:blank") {
+        window.location.href = `/fullscreen.html${window.location.search}`
+    }
+
+    function fullscreen() {
+      const tab = window.open('about:blank', '_blank');
+      const iframe = tab.document.createElement('iframe');
+      const stl = iframe.style;
+      stl.border = stl.outline = 'none';
+      stl.width = '100vw';
+      stl.height = '100vh';
+      stl.position = 'fixed';
+      stl.left = stl.right = stl.top = stl.bottom = '0';
+      iframe.src = self.location;
+      tab.document.body.appendChild(iframe);
+    }
+
+    function blank(url) {
+      const tab = window.open('about:blank', '_blank');
+      const iframe = tab.document.createElement('iframe');
+      const stl = iframe.style;
+      stl.border = stl.outline = 'none';
+      stl.width = '100vw';
+      stl.height = '100vh';
+      stl.position = 'fixed';
+      stl.left = stl.right = stl.top = stl.bottom = '0';
+      iframe.src = url;
+      tab.document.body.appendChild(iframe);
+      //window.parent.window.location.replace('https://classroom.google.com')
+    }
+
+    const params = new URLSearchParams(window.location.search)
+    if (params.get("game")) {
+      games.forEach(game => {
+        if (game.id != params.get("game")) return
+        document.title = `${game.title} | The Unblocked Hub`
+        document.querySelector("#gameImage").src = game.image
+        document.querySelector("#gameTitle").innerHTML = game.title
+        if (game.description) document.querySelector("#gameDescription").innerHTML = game.description
+        navigator.serviceWorker.register('./loadsw.js', {
+          scope: __uv$config.prefix
+        }).then(() => {
+          document.querySelector("#frame").src = __uv$config.prefix + __uv$config.encodeUrl(game.url);
+        });
+        
+      })
+    } else if (params.get("app")) {
+      
+      apps.forEach(app => {
+        if (app.id != params.get("app")) return
+        document.title = `${app.title} | The Unblocked Hub`
+        document.querySelector("#gameImage").src = app.image
+        document.querySelector("#gameTitle").innerHTML = app.title
+        if (app.description) document.querySelector("#gameDescription").innerHTML = app.description
+        navigator.serviceWorker.register('./loadsw.js', {
+          scope: __uv$config.prefix
+          
+        }).then(() => {
+          document.querySelector("#frame").src = __uv$config.prefix + __uv$config.encodeUrl(app.url);
+          
+          if (app.fullscreen) document.querySelector("#footer").style.display = "none" 
+        });
+      })
+    } else if (params.get("util")) {
+      utils.forEach(util => {
+        if (util.id != params.get("utils")) return
+        document.title = `${util.title} | The Unblocked Hub`
+        //document.querySelector("#gameImage").src = util.image
+        document.querySelector("#gameTitle").innerHTML = util.title
+        if (util.description) document.querySelector("#gameDescription").innerHTML = util.description
+        navigator.serviceWorker.register('./loadsw.js', {
+          scope: __uv$config.prefix
+        }).then(() => {
+          document.querySelector("#frame").src = __uv$config.prefix + __uv$config.encodeUrl(util.url);
+        });
+      })
+    }
+    
+    window.onbeforeunload = (event) => {
+      event.preventDefault();
+      return '';
+    }
+  </script>
+</body>
