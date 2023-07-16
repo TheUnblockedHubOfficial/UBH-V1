@@ -1,5 +1,5 @@
 function registerSW() {
-    navigator.serviceWorker.register('./loadsw.js', {
+    navigator.serviceWorker.register('./beta/loadsw.js', {
         scope: __uv$config.prefix
     })
 }
