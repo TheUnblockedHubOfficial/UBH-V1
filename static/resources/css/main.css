@@ -165,3 +165,133 @@ footer {
     color: white;
     opacity: 1;
   }
+
+.gba-roms{
+    margin-top: 10px;
+    width: 200px;
+    height: 40px;
+    background-color: rgba(59, 56, 56, 0.356);
+    border: none;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1em;
+    color: white;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.gba-roms:hover{
+    background-color: rgba(0, 0, 0, 0.356);
+    color: rgba(255, 255, 255, 0.534);
+    scale: 1.1;
+
+}
+
+.gameboy-roms{
+    margin-top: 10px;
+    width: 200px;
+    height: 40px;
+    background-color: rgba(59, 56, 56, 0.356);
+    border: none;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1em;
+    color: white;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.gameboy-roms:hover{
+    background-color: rgba(0, 0, 0, 0.356);
+    color: rgba(255, 255, 255, 0.534);
+    scale: 1.1;
+
+}
+
+.n64-roms{
+    margin-top: 10px;
+    width: 200px;
+    height: 40px;
+    background-color: rgba(59, 56, 56, 0.356);
+    border: none;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1em;
+    color: white;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.n64-roms:hover{
+    background-color: rgba(0, 0, 0, 0.356);
+    color: rgba(255, 255, 255, 0.534);
+    scale: 1.1;
+
+}
+
+.nes-roms{
+    margin-top: 10px;
+    width: 200px;
+    height: 40px;
+    background-color: rgba(59, 56, 56, 0.356);
+    border: none;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1em;
+    color: white;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.nes-roms:hover{
+    background-color: rgba(0, 0, 0, 0.356);
+    color: rgba(255, 255, 255, 0.534);
+    scale: 1.1;
+
+}
+
+.snes-roms{
+    margin-top: 10px;
+    width: 200px;
+    height: 40px;
+    background-color: rgba(59, 56, 56, 0.356);
+    border: none;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1em;
+    color: white;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.snes-roms:hover{
+    background-color: rgba(0, 0, 0, 0.356);
+    color: rgba(255, 255, 255, 0.534);
+    scale: 1.1;
+
+}

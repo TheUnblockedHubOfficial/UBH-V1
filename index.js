@@ -23,6 +23,10 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "static", "index.html"));
 });
 
+app.get("/forest", (req, res) => {
+  res.sendFile(path.join(__dirname, "static", "forest.html"));
+});
+
 app.get("/photography", (req, res) => {
   res.sendFile(path.join(__dirname, "static", "photography.html"));
 });
