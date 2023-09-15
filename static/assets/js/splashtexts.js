@@ -22,8 +22,8 @@ var splashtexts = [
     "never gonna let you down",
     "what's up chat",
     "where's my super suit?",
-    "CONGRATULATIONS! [[you lose]]",
-    "wonderful weather we're having am I right"
+    "CONGRATULATIONS! you lose",
+    "wonderful weather we're having am I right",
     "welcome to the internet",
     "(don't) do your homework",
     "make sure to like and subscribe!",
