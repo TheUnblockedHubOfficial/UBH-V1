@@ -127,7 +127,7 @@
 
 
 
-.github-btn{
+.v2-btn{
     margin-top: 10px;
     width: 200px;
     height: 40px;
@@ -146,7 +146,7 @@
     transition: all 0.5s ease-in-out;
 }
 
-.github-btn:hover{
+.v2-btn:hover{
     background-color: rgba(0, 0, 0, 0.356);
     color: rgba(255, 255, 255, 0.534);
     scale: 1.1;
