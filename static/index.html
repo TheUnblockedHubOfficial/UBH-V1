@@ -68,8 +68,7 @@
 	    <button class="v2-btn">CLICK HERE</button>
       </div>
       <script>
-        document.querySelector(".v2-btn").addEventListener("click", () => {
-          window.location.href("v2transition.html", "_blank");
+        document.querySelector(".v2-btn").addEventListener("click", () => {"window.location.href='./v2transition.html'"}
       </script>
       <script>
         if (localStorage.getItem('cloak')) {
@@ -103,8 +102,7 @@
     homebtns.forEach(btn => {
       btn.classList.add(`hvr-${effects[Math.floor(Math.random() * effects.length)]}`)
     })
-      document.querySelector(".v2-btn").addEventListener("click", () => {
-"window.location.href='/v2.html'", "_blank");
+      document.querySelector(".v2-btn").addEventListener("click", () => {"window.location.href='./v2transition.html'"}
       });
 </script>
 </div>
