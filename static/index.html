@@ -70,7 +70,7 @@
 
 	    <button class="v2-btn">CLICK HERE</button>
 	</div> <br>
-	<button class="money-btn">Support Us!</button>
+<button class="money-btn">Support Us</button>
       </div>
      <script>
   document.querySelector(".v2-btn").addEventListener("click", () => {
@@ -112,11 +112,18 @@
     homebtns.forEach(btn => {
       btn.classList.add(`hvr-${effects[Math.floor(Math.random() * effects.length)]}`)
     })
+document.addEventListener("DOMContentLoaded", function() {
   document.querySelector(".v2-btn").addEventListener("click", () => {
     window.location.href = "v2transition.html";
-  })
-  document.querySelector(".money-btn").addEventListener("click", () => {
-    window.location.href = "support.html";
+  });
+
+  const moneyButton = document.querySelector(".money-btn");
+  if (moneyButton) {
+    moneyButton.addEventListener("click", () => {
+      window.location.href = "support.html";
+    });
+  }
+
   });
 </script>
 </div>
