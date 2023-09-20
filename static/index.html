@@ -68,26 +68,27 @@
        <p>Dear User, in the coming days The Unblocked Hub will be expierencing minor and major downtimes as preperation for the transition to V2! to learn more:
       <br></p>
 
-	    <button class="v2-btn">CLICK HERE</button>
-	</div> <br>
-<button class="money-btn">Support Us</button>
-      </div>
-     <script>
-  document.querySelector(".v2-btn").addEventListener("click", () => {
-    window.location.href = "v2transition.html";
-  })
-  document.querySelector(".money-btn").addEventListener("click", () => {
-    window.location.href = "support.html";
-  });
-</script>
-      <script>
-        if (localStorage.getItem('cloak')) {
-          const cloakValue = localStorage.getItem('cloak') === 'true' ? 'true' : 'false';
-          document.getElementById('tab-cloak').value = cloakValue;
-        } else {
-          document.getElementById('tab-cloak').value = 'true';
-          localStorage.setItem('cloak', 'true');
-        }
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      document.querySelector(".v2-btn").addEventListener("click", () => {
+        window.location.href = "v2transition.html";
+      });
+
+      const moneyButton = document.querySelector(".money-btn");
+      if (moneyButton) {
+        moneyButton.addEventListener("click", () => {
+          window.location.href = "support.html";
+        });
+      }
+
+      if (localStorage.getItem('cloak')) {
+        const cloakValue = localStorage.getItem('cloak') === 'true' ? 'true' : 'false';
+        document.getElementById('tab-cloak').value = cloakValue;
+      } else {
+        document.getElementById('tab-cloak').value = 'true';
+        localStorage.setItem('cloak', 'true');
+      }
+
       </script>
       <br>
       <div>
