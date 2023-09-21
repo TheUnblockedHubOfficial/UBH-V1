@@ -77,58 +77,50 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-      document.querySelector(".v2-btn").addEventListener("click", () => {
-        window.location.href = "v2transition.html";
-      });
-
-      const moneyButton = document.querySelector(".money-btn");
-      if (moneyButton) {
-        moneyButton.addEventListener("click", () => {
-          window.location.href = "support.html";
+        document.querySelector(".v2-btn").addEventListener("click", () => {
+            window.location.href = "v2transition.html";
         });
-      }
 
-      if (localStorage.getItem('cloak')) {
-        const cloakValue = localStorage.getItem('cloak') === 'true' ? 'true' : 'false';
-        document.getElementById('tab-cloak').value = cloakValue;
-      } else {
-        document.getElementById('tab-cloak').value = 'true';
-        localStorage.setItem('cloak', 'true');
-      }
+        const moneyButton = document.querySelector(".money-btn");
+        if (moneyButton) {
+            moneyButton.addEventListener("click", () => {
+                window.location.href = "support.html";
+            });
+        });
 
-      </script>
-      <br>
-      <div>
-        <script src="assets/js/particles.js"></script>
-        <script src="/assets/js/themecontrol.js"></script>
-      </div>
-      <canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="1920" height="942"></canvas>
-      </div>
-       <!-- Google tag (gtag.js) -->
+        if (localStorage.getItem('cloak')) {
+            const cloakValue = localStorage.getItem('cloak') === 'true' ? 'true' : 'false';
+            document.getElementById('tab-cloak').value = cloakValue;
+        } else {
+            document.getElementById('tab-cloak').value = 'true';
+            localStorage.setItem('cloak', 'true');
+        }
+    });
+</script>
+
+<br>
+
+<div>
+    <script src="assets/js/particles.js"></script>
+    <script src="/assets/js/themecontrol.js"></script>
+</div>
+<canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="1920" height="942"></canvas>
+
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BX1R0Q6FP4"></script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2450237895619054"
-     crossorigin="anonymous"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2450237895619054" crossorigin="anonymous"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-BX1R0Q6FP4');
+    gtag('config', 'G-BX1R0Q6FP4');
+</script>
+
+<script>
     document.querySelector("#splashtext").innerHTML = splashtexts[Math.floor(Math.random() * splashtexts.length)];
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      document.querySelector(".v2-btn").addEventListener("click", () => {
-        window.location.href = "v2transition.html";
-      });
-
-      const moneyButton = document.querySelector(".money-btn");
-      if (moneyButton) {
-        moneyButton.addEventListener("click", () => {
-          window.location.href = "support.html";
-        });
-      }
-
+</script>
+		
       if (localStorage.getItem('cloak')) {
         const cloakValue = localStorage.getItem('cloak') === 'true' ? 'true' : 'false';
         document.getElementById('tab-cloak').value = cloakValue;
