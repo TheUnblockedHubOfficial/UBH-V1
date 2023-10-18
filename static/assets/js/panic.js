@@ -1,42 +1,34 @@
-import express from "express";
-import path from "path";
-import * as dotenv from "dotenv";
-import rateLimit from "express-rate-limit";
+// Retrieve the event key and panic link from local storage or use defaults
+var eventKey = localStorage.getItem("eventKey") || "`";
+var panicLink = localStorage.getItem("panicLink") || "https://classroom.google.com/";
 
-dotenv.config();
-
-const __dirname = process.cwd();
-const app = express();
-const port = process.env.PORT || 3000;
-
-// Define the rate limit settings
-const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100, // limit each IP to 100 requests per windowMs
+// Function to handle keydown event
+document.addEventListener("keydown", function(event) {
+  if (event.key === eventKey) {
+    if (window.self !== window.top) {
+      window.parent.location.href = panicLink;
+    } else {
+      window.location.href = panicLink;
+    }
+  }
 });
 
-app.use(limiter); // Apply rate limiting to all routes
+// Get eventKeyInput and linkInput elements by their IDs
+var eventKeyInput = document.getElementById("eventKeyInput");
+var linkInput = document.getElementById("linkInput");
 
-app.use(express.json());
-app.use(
-  express.urlencoded({
-    extended: true,
-  })
-);
-
-app.use(express.static(path.join(__dirname, "static"));
-
-// Define your routes after the rate limiter
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "static", "index.html"));
+// Add event listeners to update eventKey and panicLink when input changes
+eventKeyInput.addEventListener("input", function() {
+  eventKey = eventKeyInput.value;
 });
 
-// Define other routes...
-
-app.get("/*", (req, res) => {
-  res.redirect("/404");
+linkInput.addEventListener("input", function() {
+  panicLink = linkInput.value;
 });
 
-app.listen(port, () => {
-  console.log(`The Unblocked Hub running at http://localhost:${port}`);
-});
+// Function to save eventKey and panicLink to local storage
+function saveEventKey() {
+  eventKey = eventKeyInput.value;
+  localStorage.setItem("eventKey", eventKey);
+  localStorage.setItem("panicLink", panicLink);
+}
