@@ -1,15 +1,15 @@
 import express from "express";
-import http from "node:http";
-import createBareServer from "@tomphttp/bare-server-node";
-import path from "node:path";
+import http from "http";
+import path from "path";
 import * as dotenv from "dotenv";
-import rateLimit from "express-rate-limit"; // Import express-rate-limit
+import rateLimit from "express-rate-limit";
+
 dotenv.config();
 
 const __dirname = process.cwd();
-const server = http.createServer();
-const app = express(server);
-const bareServer = createBareServer("/bare/");
+const app = express();
+const server = http.createServer(app);
+const port = process.env.PORT || 3000;
 
 // Define the rate limit settings
 const limiter = rateLimit({
@@ -32,6 +32,12 @@ app.use(express.static(path.join(__dirname, "static"));
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "static", "index.html"));
 });
+
+app.get("/forest", (req, res) => {
+  res.sendFile(path.join(__dirname, "static", "forest.html"));
+});
+
+// Define other routes...
 
 app.get("/forest", (req, res) => {
   res.sendFile(path.join(__dirname, "static", "forest.html"));
@@ -69,27 +75,6 @@ app.get("/*", (req, res) => {
   res.redirect("/404");
 });
 
-// Bare Server
-server.on("request", (req, res) => {
-  if (bareServer.shouldRoute(req)) {
-    bareServer.routeRequest(req, res);
-  } else {
-    app(req, res);
-  }
-});
-
-server.on("upgrade", (req, socket, head) => {
-  if (bareServer.shouldRoute(req)) {
-    bareServer.routeUpgrade(req, socket, head);
-  } else {
-    socket.end();
-  }
-});
-
-server.on("listening", () => {
-  console.log(`The Unblocked Hub running at http://localhost:${process.env.PORT}`);
-});
-
-server.listen({
-  port: process.env.PORT,
+server.listen(port, () => {
+  console.log(`The Unblocked Hub running at http://localhost:${port}`);
 });
