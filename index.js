@@ -3,12 +3,21 @@ import http from "node:http";
 import createBareServer from "@tomphttp/bare-server-node";
 import path from "node:path";
 import * as dotenv from "dotenv";
+import rateLimit from "express-rate-limit"; // Import express-rate-limit
 dotenv.config();
 
 const __dirname = process.cwd();
 const server = http.createServer();
 const app = express(server);
 const bareServer = createBareServer("/bare/");
+
+// Define the rate limit settings
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // limit each IP to 100 requests per windowMs
+});
+
+app.use(limiter); // Apply rate limiting to all routes
 
 app.use(express.json());
 app.use(
@@ -17,8 +26,9 @@ app.use(
   })
 );
 
-app.use(express.static(path.join(__dirname, "static")));
+app.use(express.static(path.join(__dirname, "static"));
 
+// Define your routes after the rate limiter
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "static", "index.html"));
 });
