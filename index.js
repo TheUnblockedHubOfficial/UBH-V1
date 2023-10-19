@@ -59,42 +59,6 @@ app.get("/*", (req, res) => {
   res.redirect("/404");
 });
 
-app.get("/beta/", (req, res) => {
-  res.sendFile(path.join(__dirname, "static", "beta", "index.html"));
-});
-
-app.get("/beta/404", (req, res) => {
-  res.sendFile(path.join(__dirname, "static", "beta", "404.html"));
-});
-
-app.get("/beta/apps", (req, res) => {
-  res.sendFile(path.join(__dirname, "static", "beta", "apps.html"));
-});
-
-app.get("/beta/gs", (req, res) => {
-  res.sendFile(path.join(__dirname, "static", "beta", "gs.html"));
-});
-
-app.get("/beta/lgo", (req, res) => {
-  res.sendFile(path.join(__dirname, "static", "beta", "load.html"));
-});
-
-app.get("/beta/loading", (req, res) => {
-  res.sendFile(path.join(__dirname, "static", "beta", "fullscreen.html"));
-});
-
-app.get("/beta/search", (req, res) => {
-  res.sendFile(path.join(__dirname, "static", "beta", "search.html"));
-});
-
-app.get("/beta/settings", (req, res) => {
-  res.sendFile(path.join(__dirname, "static", "beta", "settings.html"));
-});
-
-app.get("/beta/utilities", (req, res) => {
-  res.sendFile(path.join(__dirname, "static", "beta", "utils.html"));
-});
-
 // Bare Server
 server.on("request", (req, res) => {
   if (bareServer.shouldRoute(req)) {
