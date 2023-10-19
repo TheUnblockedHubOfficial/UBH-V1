@@ -1,23 +1,14 @@
 import express from "express";
-import http from "http";
-import path from "path";
+import http from "node:http";
+import createBareServer from "@tomphttp/bare-server-node";
+import path from "node:path";
 import * as dotenv from "dotenv";
-import rateLimit from "express-rate-limit";
-
 dotenv.config();
 
 const __dirname = process.cwd();
-const app = express();
-const server = http.createServer(app);
-const port = process.env.PORT || 3000;
-
-// Define the rate limit settings
-const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100, // limit each IP to 100 requests per windowMs
-});
-
-app.use(limiter); // Apply rate limiting to all routes
+const server = http.createServer();
+const app = express(server);
+const bareServer = createBareServer("/bare/");
 
 app.use(express.json());
 app.use(
@@ -26,18 +17,11 @@ app.use(
   })
 );
 
-app.use(express.static(path.join(__dirname, "static"));
+app.use(express.static(path.join(__dirname, "static")));
 
-// Define your routes after the rate limiter
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "static", "index.html"));
 });
-
-app.get("/forest", (req, res) => {
-  res.sendFile(path.join(__dirname, "static", "forest.html"));
-});
-
-// Define other routes...
 
 app.get("/forest", (req, res) => {
   res.sendFile(path.join(__dirname, "static", "forest.html"));
@@ -75,6 +59,63 @@ app.get("/*", (req, res) => {
   res.redirect("/404");
 });
 
-server.listen(port, () => {
-  console.log(`The Unblocked Hub running at http://localhost:${port}`);
+app.get("/beta/", (req, res) => {
+  res.sendFile(path.join(__dirname, "static", "beta", "index.html"));
+});
+
+app.get("/beta/404", (req, res) => {
+  res.sendFile(path.join(__dirname, "static", "beta", "404.html"));
+});
+
+app.get("/beta/apps", (req, res) => {
+  res.sendFile(path.join(__dirname, "static", "beta", "apps.html"));
+});
+
+app.get("/beta/gs", (req, res) => {
+  res.sendFile(path.join(__dirname, "static", "beta", "gs.html"));
+});
+
+app.get("/beta/lgo", (req, res) => {
+  res.sendFile(path.join(__dirname, "static", "beta", "load.html"));
+});
+
+app.get("/beta/loading", (req, res) => {
+  res.sendFile(path.join(__dirname, "static", "beta", "fullscreen.html"));
+});
+
+app.get("/beta/search", (req, res) => {
+  res.sendFile(path.join(__dirname, "static", "beta", "search.html"));
+});
+
+app.get("/beta/settings", (req, res) => {
+  res.sendFile(path.join(__dirname, "static", "beta", "settings.html"));
+});
+
+app.get("/beta/utilities", (req, res) => {
+  res.sendFile(path.join(__dirname, "static", "beta", "utils.html"));
+});
+
+// Bare Server
+server.on("request", (req, res) => {
+  if (bareServer.shouldRoute(req)) {
+    bareServer.routeRequest(req, res);
+  } else {
+    app(req, res);
+  }
+});
+
+server.on("upgrade", (req, socket, head) => {
+  if (bareServer.shouldRoute(req)) {
+    bareServer.routeUpgrade(req, socket, head);
+  } else {
+    socket.end();
+  }
+});
+
+server.on("listening", () => {
+  console.log(`The Unblocked Hub running at http://localhost:${process.env.PORT}`);
+});
+
+server.listen({
+  port: process.env.PORT,
 });
