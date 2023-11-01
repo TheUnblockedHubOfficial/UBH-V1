@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Classes</title>
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
-  <meta name="description" content="From studio portraits to epic alpine landscapes, browse the best photography, retouching, and photojournalism today." />
+  <meta charset="UTF-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="monetag" content="74848e8ddd965b05956660ef1d8d1f4a">
-  <!-- Load the site scripts -->
-  <script src="resources/js/main.js"></script>
-  <script src="assets/js/panic.js"></script>
-  <script src="assets/js/particles.js"></script>
-  <script src="assets/js/splashtexts.js"></script>
-  <link rel="stylesheet" href="assets/css/particles.css" />
-  <link rel="stylesheet" href="resources/css/main.css" />
+  <meta name="description" content="From studio portraits to epic alpine landscapes, browse the best photography, retouching, and photojournalism today.">
+<!-- Google tag (gtag.js) --> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BX1R0Q6FP4"></script>
+  <script async src="https://pagead2.googlesyndication.com/page
+  <title>Classes</title>
+  <link rel="stylesheet" href="assets/css/particles.css">
+  <link rel="stylesheet" href="resources/css/main.css">
   <link rel="shortcut icon" href="resources/images/favicon/favicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="assets/css/nav.css">
 </head>
 <body>
   <!-- Nav Bar Start -->
@@ -32,17 +29,17 @@
     </div>
   </div>
   <!-- Nav Bar End -->
-  <body class="classic midnight">
+
+  <div class="classic midnight">
     <canvas class="particles-js-canvas-el" style="z-index: 10; top: 0; left: 0; position: absolute; width: 100%; height: 100%;" width="1920" height="942"></canvas>
-  <div id="particles-js">
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script async src="https://nwwais.com/pw/waWQiOjExNjg5MzMsInNpZCI6MTI5Mzc3OCwid2lkIjo1MD4zOTIsInNyYyI6Mn0=eyJ.js"></script>
+    <div id="particles-js"></div>
   </div>
   <br>
   <br>
   <br>
-  <iframe src="EmulatorJS/index.html" width="100%" height="500" allowfullscreen style="margin: 0 auto; display: block;"></iframe>
-  <br><br>
+  <iframe src="EmulatorJS/index.html" width="100%" height="500" allowfullscreen></iframe>
+  <br>
+  <br>
   <h1>Need ROMs?</h1>
   <p>Here's some links to them (via archive.org)</p>
   <div class="gba-roms">GBA Roms</div>
@@ -51,11 +48,31 @@
   <div class="nes-roms">NES Roms</div>
   <div class="snes-roms">SNES Roms</div>
   <div style="margin-bottom: 100px"></div>
-  </body>
+  <!-- Include JavaScript files -->
+  <script src="resources/js/main.js"></script>
+  <script src="assets/js/panic.js"></script>
   <script src="assets/js/particles.js"></script>
+  <script src="assets/js/splashtexts.js"></script>
   <script src="/assets/js/themecontrol.js"></script>
-  <canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="1920" height="942"></canvas>
-  </div>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BX1R0Q6FP4"></script>
-  <script async src="https://pagead2.googlesyndication.com/page
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://nwwais.com/pw/waWQiOjExNjg5MzMsInNpZCI6MTI5Mzc3OCwid2lkIjo1MD4zOTIsInNyYyI6Mn0=eyJ.js"></script>
+  <script src="https://zmonei.com/na/waWQiOjExNjg5MzMsInNpZCI6MTI5Mzc3OCwid2lkIjo1MDQzODcsInNyYyI6Mn0=eyJ.js"></script>
+  <script>
+    document.querySelector(".gba-roms").addEventListener("click", () => {
+      window.open("https://archive.org/download/nointro.gba", "_blank");
+    });
+    document.querySelector(".gameboy-roms").addEventListener("click", () => {
+      window.open("https://archive.org/download/nointro.gb", "_blank");
+    });
+    document.querySelector(".n64-roms").addEventListener("click", () => {
+      window.open("https://archive.org/download/nointro.n64", "_blank");
+    });
+    document.querySelector(".nes-roms").addEventListener("click", () => {
+      window.open("https://archive.org/download/nointro.nes", "_blank");
+    });
+    document.querySelector(".snes-roms").addEventListener("click", () => {
+      window.open("https://archive.org/download/nointro.snes", "_blank");
+    });
+  </script>
+</body>
+</html>
