@@ -1,189 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <title>Classes</title>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
     <meta name="monetag" content="74848e8ddd965b05956660ef1d8d1f4a">
     <meta http-equiv="Pragma" content="no-cache"/>
     <meta http-equiv="Expires" content="0"/>
-    <meta name="description" content="From studio portraits to epic alpine landscapes, browse the best photography, retouching and photojournalism today."/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Changed initial-scale to 1 -->
-    <!-- Load the site scripts -->
-    <script src="resources/js/main.js"></script>
-    <script src="assets/js/panic.js"></script>
-    <script src="assets/js/particles.js"></script>
-
+    <meta name="description" content="From studio portraits to epic alpine landscapes, browse the best photography, retouching, and photojournalism today."/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/particles.css" />
     <link rel="shortcut icon" href="resources/images/favicon/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="resources/css/home.css"/>
     <link rel="stylesheet" href="assets/css/nav.css">
-  </head>
-  <body class="classic midnight"> <!-- Removed duplicate body tag -->
+</head>
+<body class="classic midnight">
     <!-- Nav Bar Start-->
     <div class="header2">
-      <br>
-      <a href="/../" class="logo">The Unblocked Hub</a>
-      <div class="header2-right">
-        <a href="photography">Proxy</a>
-        <a href="nature">Games</a>
-        <a href="ocean">Apps</a>
-        <a href="forest">Emulator</a>
-        <a href="settings">Settings</a>
-      </div>
+        <br>
+        <a href="/../" class="logo">The Unblocked Hub</a>
+        <div class="header2-right">
+            <a href="photography">Proxy</a>
+            <a href="nature">Games</a>
+            <a href="ocean">Apps</a>
+            <a href="forest">Emulator</a>
+            <a href="settings">Settings</a>
+        </div>
     </div>
     <!-- Nav Bar End-->
     <div id="cookieNotice" class="light display-right" style="display: block;">
-      <div id="closeIcon" style="display: none;"></div>
-      <div class="title-wrap">
-        <h4>Cookie Consent</h4>
-      </div>
-      <div class="content-wrap">
-        <div class="msg-wrap">
-          <p>We use cookies! This website uses cookies or similar technologies to enhance your browsing experience and provide personalized recommendations. By continuing to use our website, you agree to our <a style="color: grey;" href="cookieconsentpolicy.html">Cookie Policy</a></p>
-          <div class="btn-wrap">
-            <button class="popupbutton" onclick="acceptCookieConsent();">Accept</button>
-          </div>
+        <div id="closeIcon" style="display: none;"></div>
+        <div class="title-wrap">
+            <h4>Cookie Consent</h4>
         </div>
-      </div>
+        <div class="content-wrap">
+            <div class="msg-wrap">
+                <p>We use cookies! This website uses cookies or similar technologies to enhance your browsing experience and provide personalized recommendations. By continuing to use our website, you agree to our <a style="color: grey;" href="cookieconsentpolicy.html">Cookie Policy</a></p>
+                <div class="btn-wrap">
+                    <button class="popupbutton" onclick="acceptCookieConsent();">Accept</button>
+                </div>
+            </div>
+        </div>
     </div>
     <script async src="https://nwwais.com/pw/waWQiOjExNjg5MzMsInNpZCI6MTI5Mzc3OCwid2lkIjo1MDQzOTIsInNyYyI6Mn0=eyJ.js"></script>
-    </div>
-    <!-- JavaScript source file -->
+    <!-- JavaScript source files -->
+    <script src="resources/js/main.js"></script>
+    <script src="assets/js/panic.js"></script>
+    <script src="assets/js/particles.js"></script>
     <script src="resources/js/cookie_consent.js"></script>
-    <canvas class="particles-js-canvas-el" style="z-index: 10; top: 0; left: 0; position: absolute; width: 100%; height: 100%;" width="1920" height="942"></canvas>
-    <div id="particles-js">
-      <div class="container">
-        <div class="mainhead">
-          <div class="title">
-            <h1>The Unblocked Hub</h1>
-          </div>
-          <br>
-          <p id="splashtext"></p>
-        </div>
-        <br>
-        <p>The Unblocked Hub is FOR SALE! to find out more information email theunblockedhub@dibiaseproductions.com All assets including the status page, github, server, and V2 source files are included you will recieve and manage the entirety of The Unblocked Hub. Email me to find out more!</p>
-        <br>
-        <p>Dear User, atrting in December The Unblocked Hub will be experiencing minor and major downtimes as we transition to V2! To learn more click below:</p> <!-- Removed <br> and added </p> -->
-        <div>
-          <button class="v2-btn">V2 Info</button>
-        </div>
-        <br>
-        <div>
-          <button class="money-btn">Support Us!</button>
-        </div>
-      </div>
-      <script async src="https://zmonei.com/na/waWQiOjExNjg5MzMsInNpZCI6MTI5Mzc3OCwid2lkIjo1MDQzODcsInNyYyI6Mn0=eyJ.js"></script>
-      </div>
-      <br>
-      <div>
-        <script src="assets/js/particles.js"></script>
-        <script src="assets/js/themecontrol.js"></script> <!-- Removed leading slash (/) from the src attribute -->
-      </div>
-    </div>
+    <script src="assets/js/themecontrol.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelector(".v2-btn").addEventListener("click", () => {
+                window.location.href = "v2transition.html";
+            });
+
+            const moneyButton = document.querySelector(".money-btn");
+            if (moneyButton) {
+                moneyButton.addEventListener("click", () => {
+                    window.location.href = "support.html";
+                });
+            }
+
+            if (localStorage.getItem('cloak')) {
+                const cloakValue = localStorage.getItem('cloak') === 'true' ? 'true' : 'false';
+                document.getElementById('tab-cloak').value = cloakValue;
+            } else {
+                document.getElementById('tab-cloak').value = 'true';
+                localStorage.setItem('cloak', 'true');
+            }
+
+            // Get the #splashtext element
+            const splashtextElement = document.getElementById("splashtext");
+
+            // Array of splash texts
+            var splashtexts = [
+   	 "What is this?",
+   	 "do your homework",
+   	 "why does this exist",
+   	 "who am I anymore",
+  	  "minecraft was the best game",
+   	 "I give up",
+    	"The Unblocked Hub is a W",
+   	 "DiBiase Productions makes the best games!",
+   	 "We love Fortnite, We love Fortnite",
+   	 "what are friends?",
+  	  "no david no",
+  	  "don't eat that david",
+  	  "this is splash text",
+  	  "public static void main()",
+ 	   "nope thats not correct",
+	    "no",
+  	  "yes",
+  	  "bro, what?",
+   	 "it's a canon event",
+    	"crazy? i was crazy once",
+   	 "never gonna let you down",
+    	"what's up chat",
+   	 "where's my super suit?",
+    	"CONGRATULATIONS! you lose",
+   	 "wonderful weather we're having am I right",
+  	  "welcome to the internet",
+  	  "(don't) do your homework",
+	    "make sure to like and subscribe!",
+ 	   "this new splash text guy is great at his job fr",
+ 	   "PHENOMENAL COSMIC POWER, itty bitty living space",
+	    "AAAAUGH! IT BURNS! IT BURNS!",
+ 	   "a pretty bold move",
+	    "you can really taste the flavor text!",
+ 	   "well, uhm acktually",
+ 	   "cry about it",
+   	 "bigger and better than ever! or something like that",
+ 	   "target: (david) status: (terminated)",
+  	  "are there snacks?",
+   	 "monkey buisness central",
+   	 "yo chat is this real",
+   	 "e̷͎͋v̶̩͝ḛ̴̂r̴̢̈y̵͇̎ț̸͆h̷̟̔i̷̱̚n̷̩̽g̴̛͙ ̷̼̑ȋ̴̬s̵̡̐ ̸͔̎f̸̩͌ĩ̵̧n̸̡͌ē̸̝",
+  	  "I still dont understand the question",
+  	  "ULTRA MEGA CRYSTAL RARE SPLASH TEXT",
+ 	   "INFINITE POWER",
+	    "NOWS YOUR CHANCE TO BE A",
+	    "alexander hamilton",
+	    "splesh tects",
+    	"the best hub is right here ;)",
+    	"but thats just a theory",
+    	"nows your chance to answer the phone, I can't explain 'till you're all alone, pull the strings and make them ring until your heart starts breaking up",
+ 	   "insert splash text here",
+ 	   "perhaps",
+ 	   "you can play a whole 20 questions with this",
+   	 "thats not true",
+            ];
+
+            // Select a random splash text from the splashtexts array
+            const randomIndex = Math.floor(Math.random() * splashtexts.length);
+            const randomSplashText = splashtexts[randomIndex];
+
+            // Update the content of the #splashtext element
+            splashtextElement.textContent = randomSplashText;
+        });
+    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BX1R0Q6FP4"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2450237895619054" crossorigin="anonymous"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', 'G-BX1R0Q6FP4');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-BX1R0Q6FP4');
     </script>
-    <!-- Event listener for buttons -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        document.querySelector(".v2-btn").addEventListener("click", () => {
-          window.location.href = "v2transition.html";
-        });
-
-        const moneyButton = document.querySelector(".money-btn");
-        if (moneyButton) {
-          moneyButton.addEventListener("click", () => {
-            window.location.href = "support.html";
-          });
-        } // Removed extra closing parenthesis here
-
-        if (localStorage.getItem('cloak')) {
-          const cloakValue = localStorage.getItem('cloak') === 'true' ? 'true' : 'false';
-          document.getElementById('tab-cloak').value = cloakValue;
-        } else {
-          document.getElementById('tab-cloak').value = 'true';
-          localStorage.setItem('cloak', 'true');
-        }
-      });
-    </script>
-    
-    <script>
-document.addEventListener("DOMContentLoaded", function () {
-  // Get the #splashtext element
-  const splashtextElement = document.getElementById("splashtext");
-
-  // Array of splash texts
-  var splashtexts = [
-    "What is this?",
-    "do your homework",
-    "why does this exist",
-    "who am I anymore",
-    "minecraft was the best game",
-    "I give up",
-    "The Unblocked Hub is a W",
-    "DiBiase Productions makes the best games!",
-    "We love Fortnite, We love Fortnite",
-    "what are friends?",
-    "no david no",
-    "don't eat that david",
-    "this is splash text",
-    "public static void main()",
-    "nope thats not correct",
-    "no",
-    "yes",
-    "bro, what?",
-    "it's a canon event",
-    "crazy? i was crazy once",
-    "never gonna let you down",
-    "what's up chat",
-    "where's my super suit?",
-    "CONGRATULATIONS! you lose",
-    "wonderful weather we're having am I right",
-    "welcome to the internet",
-    "(don't) do your homework",
-    "make sure to like and subscribe!",
-    "this new splash text guy is great at his job fr",
-    "PHENOMENAL COSMIC POWER, itty bitty living space",
-    "AAAAUGH! IT BURNS! IT BURNS!",
-    "a pretty bold move",
-    "you can really taste the flavor text!",
-    "well, uhm acktually",
-    "cry about it",
-    "bigger and better than ever! or something like that",
-    "target: (david) status: (terminated)",
-    "are there snacks?",
-    "monkey buisness central",
-    "yo chat is this real",
-    "e̷͎͋v̶̩͝ḛ̴̂r̴̢̈y̵͇̎ț̸͆h̷̟̔i̷̱̚n̷̩̽g̴̛͙ ̷̼̑ȋ̴̬s̵̡̐ ̸͔̎f̸̩͌ĩ̵̧n̸̡͌ē̸̝",
-    "I still dont understand the question",
-    "ULTRA MEGA CRYSTAL RARE SPLASH TEXT",
-    "INFINITE POWER",
-    "NOWS YOUR CHANCE TO BE A",
-    "alexander hamilton",
-    "splesh tects",
-    "the best hub is right here ;)",
-    "but thats just a theory",
-    "nows your chance to answer the phone, I can't explain 'till you're all alone, pull the strings and make them ring until your heart starts breaking up",
-    "insert splash text here",
-    "perhaps",
-    "you can play a whole 20 questions with this",
-    "thats not true",
-  ];
-
-  // Select a random splash text from the splashtexts array
-  const randomIndex = Math.floor(Math.random() * splashtexts.length);
-  const randomSplashText = splashtexts[randomIndex];
-
-  // Update the content of the #splashtext element
-  splashtextElement.textContent = randomSplashText;
-});
-</script>
     <footer>Copyright &copy; 2023 The Unblocked Hub</footer>
-  </body>
+</body>
 </html>
