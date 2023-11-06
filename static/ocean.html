@@ -406,6 +406,7 @@
       </div>
     </div>
     <!-- Add more card elements here -->
+
     <!-- External Scripts -->
 
     <!-- Google tag (gtag.js) -->
@@ -425,16 +426,17 @@
     <!-- Custom Script -->
     <script>
         function searchAnimal() {
-            const searchbar = document.getElementById("searchbar");
-            if (searchbar.value === '') {
-                // Code to execute if input field is empty
-                searchbar.style.width = "25%";
-                searchbar.style.height = "60px";
-            } else {
-                // Code to execute if input field is not empty
-                searchbar.style.width = "70%";
-                searchbar.style.height = "60px";
-            }
+            const searchValue = document.getElementById("searchbar").value.toLowerCase();
+            const cards = document.querySelectorAll('.card.animals');
+
+            cards.forEach(card => {
+                const cardText = card.querySelector('p3').textContent.toLowerCase();
+                if (cardText.includes(searchValue)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
         }
     </script>
     <footer>Copyright &copy; 2023 The Unblocked Hub</footer>
