@@ -1,7 +1,7 @@
 {
   "name": "The Unblockd Hub",
   "version": "1.3.6",
-  "description": "The Unblocked Hub is the #1 site for all-in-one school entertainment. Accelerate your "learning" with our collection of games, apps, emulators, proxies, and so much more.",
+  "description": "theunblockedhub.com",
   "type": "module",
   "engines": {
     "npm": ">=7.0.0",
