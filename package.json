@@ -1,7 +1,7 @@
 {
   "name": "Play4All",
   "version": "1.3.6",
-  "description": "CasPlay",
+  "description": "Play4All",
   "type": "module",
   "engines": {
     "npm": ">=7.0.0",
@@ -11,7 +11,7 @@
     "start": "node index.js"
   },
   "keywords": [
-    "proxy"
+    "123"
   ],
   "author": "",
   "license": "GPL-3.0-or-later",
