@@ -1,2 +1,3 @@
 node_modules/
 .DS_Store
+static/.render_temp_index.html
