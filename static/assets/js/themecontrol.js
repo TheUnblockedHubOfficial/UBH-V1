@@ -1,5 +1,10 @@
 document.addEventListener("DOMContentLoaded", function (event) {
-  if (localStorage.getItem("Classic") === "on") {
+  if (localStorage.getItem("Christmas") === "on") {
+    document.body.style.backgroundColor = "#c52e2d"; // Christmas Red
+    document.body.style.color = "#ffffff"; // White
+    document.body.style.setProperty("--bg-c", "#c52e2d"); // Christmas Red
+    setThemeValue("Christmas");
+  } else if (localStorage.getItem("Classic") === "on") {
     document.body.style.backgroundColor = "#111";
     document.body.style.color = "#ffffff";
     document.body.style.setProperty("--bg-c", "#111");
@@ -16,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     setThemeValue("Midnight");
   } else if (localStorage.getItem("Light") === "on") {
     document.body.style.backgroundColor = "#fff";
-    document.body.style.color = "#000";
+    document.body.style.color = "#000000";
     document.body.style.setProperty("--bg-c", "#fff");
     setThemeValue("Light");
   }
