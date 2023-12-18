@@ -1,5 +1,5 @@
 document.getElementById("Themes").onchange = function () {
-  if (this.value === "Classic") {
+  } else if (this.value === "Classic") {
     localStorage.setItem("Christmas", "off");
     localStorage.setItem("Classic", "on");
     localStorage.setItem("Ocean", "off");
@@ -35,14 +35,14 @@ document.getElementById("Themes").onchange = function () {
     document.body.style.backgroundColor = "#fff";
     document.body.style.color = "#000000";
     document.body.style.setProperty("--bg-c", "#fff");
-  } else if (this.value === "Christmas") {
+    if (this.value === "Christmas") {
     localStorage.setItem("Christmas", "on");
     localStorage.setItem("Classic", "off");
     localStorage.setItem("Ocean", "off");
     localStorage.setItem("Midnight", "off");
     localStorage.setItem("Light", "off");
-    document.body.style.backgroundColor = "#c52e2d"; // Christmas Red
-    document.body.style.color = "#ffffff"; // White
-    document.body.style.setProperty("--bg-c", "#c52e2d"); // Christmas Red
+    document.body.style.background = "linear-gradient(to right, #c52e2d, #00aa4f)"; // Red to brighter green gradient
+    document.body.style.color = "#ffffff";
+    document.body.style.setProperty("--bg-c", "linear-gradient(to right, #c52e2d, #00aa4f)"); // Red to brighter green gradient
   }
 };
