@@ -17,9 +17,6 @@
   <link rel="stylesheet" href="assets/css/nav.css">
   <script src="resources/js/main.js"></script>
   <script src="assets/js/panic.js"></script>
-  <script src="assets/js/particles.js"></script>
-  <script src="assets/js/splashtexts.js"></script>
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <style>
     .button-container {
       display: flex;
@@ -37,18 +34,21 @@
   <!-- Nav Bar Start-->
   <div class="header2">
     <br>
-    <a href="/../" class="logo">The Unblocked Hub</a>
+    <a href="/../" class="logo">
+        <img src="xmaslogo.png" alt="The Unblocked Hub Logo">
+    </a>
     <div class="header2-right">
-      <a href="photography">Proxy</a>
-      <a href="nature">Games</a>
-      <a href="ocean">Apps</a>
-      <a href="forest">Emulator</a>
-      <a href="settings">Settings</a>
+        <a href="photography" style="font-size: 25px; font-weight: bold;">Proxy</a>
+        <a href="nature" style="font-size: 25px; font-weight: bold;">Games</a>
+        <a href="ocean" style="font-size: 25px; font-weight: bold;">Apps</a>
+        <a href="forest" style="font-size: 25px; font-weight: bold;">Emulator</a>
+        <a href="settings" style="font-size: 25px; font-weight: bold;">Settings</a>
     </div>
-  </div>
+</div>
   <!-- Nav Bar End-->
 
   <div id="particles-js">
+    <canvas class="particles-js-canvas-el" style="z-index: 10; top: 0; left: 0; position: absolute; width: 100%; height: 100%;" width="1920" height="942"></canvas>
     <br><br><br><br><br>
     <div style="text-align: center;">
       <iframe src="EmulatorJS/index.html" width="80%" height="600" allowfullscreen></iframe>
@@ -70,11 +70,13 @@
   </div>
 
   <footer>Copyright &copy; 2023 The Unblocked Hub</footer>
-
+  <canvas class="particles-js-canvas-el" style="z-index: 10; top: 0; left: 0; position: absolute; width: 100%; height: 100%;" width="1920" height="942"></canvas>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BX1R0Q6FP4"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2450237895619054"
     crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="assets/js/particles.js"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
 

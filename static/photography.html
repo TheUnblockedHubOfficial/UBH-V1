@@ -8,10 +8,26 @@
   <link rel="stylesheet" href="assets/css/settings/main.css" />
   <link rel="stylesheet" href="resources/css/main.css" />
   <link rel="stylesheet" href="assets/css/nav.css" />
+  <link rel="stylesheet" href="assets/css/particles.css" />
   <style>
     /* Add this CSS code */
     .searchbar {
       margin-top: 100px;
+    }
+
+    /* Updated styles for the particles canvas */
+    #particles-js {
+      position: relative;
+      height: 100vh;
+    }
+
+    .particles-js-canvas-el {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1; /* Adjusted the z-index */
     }
   </style>
   <!-- Meta Tag -->
@@ -22,17 +38,21 @@
   <!-- Nav Bar Start-->
   <div class="header2">
     <br>
-    <a href="/../" class="logo">The Unblocked Hub</a>
+    <a href="/../" class="logo">
+        <img src="xmaslogo.png" alt="The Unblocked Hub Logo">
+    </a>
     <div class="header2-right">
-      <a href="photography">Proxy</a>
-      <a href="nature">Games</a>
-      <a href="ocean">Apps</a>
-      <a href="forest">Emulator</a>
-      <a href="settings">Settings</a>
+        <a href="photography" style="font-size: 25px; font-weight: bold;">Proxy</a>
+        <a href="nature" style="font-size: 25px; font-weight: bold;">Games</a>
+        <a href="ocean" style="font-size: 25px; font-weight: bold;">Apps</a>
+        <a href="forest" style="font-size: 25px; font-weight: bold;">Emulator</a>
+        <a href="settings" style="font-size: 25px; font-weight: bold;">Settings</a>
     </div>
-  </div>
+</div>
   <br>
   <br>
+<div id="particles-js">
+  <canvas class="particles-js-canvas-el" style="z-index: 10; top: 0; left: 0; position: absolute; width: 100%; height: 100%;" width="1920" height="942"></canvas>
   <div class="searchbar">
     <form>
       <input tag="searchbar" id="searchbar" placeholder="Search the web freely" />
@@ -70,6 +90,10 @@
   </script>
   <!-- Footer -->
   <footer>Copyright &copy; 2023 The Unblocked Hub</footer>
+</div>
+<canvas class="particles-js-canvas-el" style="z-index: 10; top: 0; left: 0; position: absolute; width: 100%; height: 100%;" width="1920" height="942"></canvas>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="assets/js/particles.js"></script>
 </body>
 
 </html>
