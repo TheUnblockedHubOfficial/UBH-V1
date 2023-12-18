@@ -80,36 +80,76 @@
         gtag('config', 'G-BX1R0Q6FP4');
     </script>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const splashtextElement = document.getElementById("splashtext");
-            var splashtexts = [
-                "Welcome back",
-                "welcome"
-            ];
-            const randomIndex = Math.floor(Math.random() * splashtexts.length);
-            const randomSplashText = splashtexts[randomIndex];
-            splashtextElement.textContent = randomSplashText;
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const splashtextElement = document.getElementById("splashtext");
+        var splashtexts = [
+            "Merry Christmas ya filthy animal",
+            "Can you believe it? Christmas! Only 364 days away!",
+            "Now bring us some figgy pudding",
+            "KRRRRRIIIMMMMMMMMAAAAAAAAAAAAAA",
+            "We won't go until we get some",
+            "People are 1#: lazy, we only care about ourselves",
+            "Your competition knows this, so their crap flies off the shelves",
+            "Are ya dying hard or hardly dying?",
+            "Good news! I let out the Christmas spirits! Run.",
+            "Merry Christmas to all! (except Wisconsin and Wyoming)",
+            "Merry Christmas from us at the Unblocked hub! :)",
+            "Unblocking the holiday!",
+            "Hm. it's almost time for that one December holiday.",
+            "Festive!",
+            "Reindeer game central",
+            "It's that Christmas morning feeling once again!",
+            "You better watch out, you better not cry",
+            "It’s beginning to look a lot like Christmas",
+            "Can we do christmas in june?",
+            "And deck the halls with Boughs of holly!",
+            "Please note: Christmas is canceled. Apparently, you told Santa you have been good this year… He died laughing.",
+            "Merry Christmas! May your happiness be large and your bills be small.",
+            "Keep your friends close, your enemies closer, and receipts for all major purchases the closest.",
+            "Merry Christmas! Don’t worry, this website has been SANTA-tized!",
+            "Merry Christmas! Hope you didn’t spend too much — unless, of course, it’s on a gift I want.",
+            "It’s the most wonderful time of the year. Allegedly.",
+            "There’s only one Christmas spirit and I just spent it all on a box",
+            "We are opening the presents now. Not later. Now. Why? We’re old and we can open our presents WHENEVER WE WANT!",
+            "Merry Christmas!",
+            "Happy Christmas!",
+            "Nizhónígo Késhmish!",
+            "Have a good Chrissie!",
+            "Feliz Navidad!",
+            "Nollaig shona duit!",
+            "Joyeux Noël!",
+            "Crăciun Fericit!",
+            "Shubh Krismas!",
+            "圣诞快乐 (Shèng dàn kuài lè)",
+            "Maligayang Pasko!",
+            "Kilisimasi Fiefia",
+            "Noheli nziza!"
+        ];
+        const randomIndex = Math.floor(Math.random() * splashtexts.length);
+        const randomSplashText = splashtexts[randomIndex];
+        splashtextElement.textContent = randomSplashText;
 
-            document.querySelector(".v2-btn").addEventListener("click", () => {
-                window.location.href = "v2transition.html";
-            });
-
-            const moneyButton = document.querySelector(".money-btn");
-            if (moneyButton) {
-                moneyButton.addEventListener("click", () => {
-                    window.location.href = "support.html";
-                });
-            }
-            if (localStorage.getItem('cloak')) {
-                const cloakValue = localStorage.getItem('cloak') === 'true' ? 'true' : 'false';
-                document.getElementById('tab-cloak').value = cloakValue;
-            } else {
-                document.getElementById('tab-cloak').value = 'true';
-                localStorage.setItem('cloak', 'true');
-            }
+        document.querySelector(".v2-btn").addEventListener("click", () => {
+            window.location.href = "v2transition.html";
         });
-    </script>
+
+        const moneyButton = document.querySelector(".money-btn");
+        if (moneyButton) {
+            moneyButton.addEventListener("click", () => {
+                window.location.href = "support.html";
+            });
+        }
+        if (localStorage.getItem('cloak')) {
+            const cloakValue = localStorage.getItem('cloak') === 'true' ? 'true' : 'false';
+            document.getElementById('tab-cloak').value = cloakValue;
+        } else {
+            document.getElementById('tab-cloak').value = 'true';
+            localStorage.setItem('cloak', 'true');
+        }
+    });
+</script>
+
 
     <footer>Copyright &copy; 2023 The Unblocked Hub</footer>
 </body>

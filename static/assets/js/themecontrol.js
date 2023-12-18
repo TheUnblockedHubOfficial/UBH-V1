@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function (event) {
   if (localStorage.getItem("Christmas") === "on") {
-    document.body.style.background = "linear-gradient(to right, #c52e2d, #00aa4f)"; // Red to brighter green gradient
+    document.body.style.backgroundColor = "#c52e2d"; // Christmas Red
     document.body.style.color = "#ffffff"; // White
-    document.body.style.setProperty("--bg-c", "linear-gradient(to right, #c52e2d, #00aa4f)"); // Red to brighter green gradient
+    document.body.style.setProperty("--bg-c", "#c52e2d"); // Christmas Red
     setThemeValue("Christmas");
   } else if (localStorage.getItem("Classic") === "on") {
     document.body.style.backgroundColor = "#111";
